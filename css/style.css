@@ -329,15 +329,11 @@ body.lock {
     transition: all 0.5s ease;
     opacity: 1;
   }
-  .navigation__mobile-menu.active .social-icons__icon:nth-child(2) {
+  .navigation__mobile-menu.active .social-icons__icon:nth-child(1) {
     -webkit-transition-delay: 0.2s;
             transition-delay: 0.2s;
   }
-  .navigation__mobile-menu.active .social-icons__icon:nth-child(1) {
-    -webkit-transition-delay: 0.25s;
-            transition-delay: 0.25s;
-  }
-  .navigation__mobile-menu.active .social-icons__icon:nth-child(3) {
+  .navigation__mobile-menu.active .social-icons__icon:nth-child(2) {
     -webkit-transition-delay: 0.25s;
             transition-delay: 0.25s;
   }
