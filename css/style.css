@@ -769,6 +769,12 @@ body.lock {
   padding: 0 64px;
   padding-top: 64px;
 }
+@media (max-width: 576px) {
+  .footer__container {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+}
 .footer__top {
   display: -webkit-box;
   display: -ms-flexbox;
