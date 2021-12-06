@@ -126,6 +126,14 @@ body {
   font-weight: 400;
 }
 
+.top-select__label {
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 12px;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
 .footer__additional-info, .gallery__container, .features-01__bottom-container, .hero__container, .social-icons, .navigation__links-box, .navigation__logo-box, .navigation__container {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -185,6 +193,83 @@ body.lock {
     line-height: 40px;
   }
 }
+.top-select {
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  position: fixed;
+  overflow: scroll;
+  max-width: 100%;
+  z-index: 500;
+  background: #fff;
+  -webkit-box-shadow: 0px 6px 8px -6px rgba(24, 39, 75, 0.08), 0px 8px 16px -6px rgba(24, 39, 75, 0.05);
+          box-shadow: 0px 6px 8px -6px rgba(24, 39, 75, 0.08), 0px 8px 16px -6px rgba(24, 39, 75, 0.05);
+}
+.top-select__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+}
+.top-select__item {
+  padding: 18px 0px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  row-gap: 8px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-right: 1px solid rgba(43, 46, 74, 0.15);
+  min-width: 175px;
+  -webkit-transition: all 0.1s ease;
+  transition: all 0.1s ease;
+}
+.top-select__item:hover {
+  cursor: pointer;
+}
+.top-select__item:nth-child(1):hover {
+  background: rgba(55, 66, 250, 0.1);
+}
+.top-select__item:nth-child(2):hover {
+  background: rgba(238, 82, 83, 0.1);
+}
+.top-select__item:nth-child(3):hover {
+  background: rgba(255, 236, 120, 0.1);
+}
+.top-select__item:nth-child(4):hover {
+  background: rgba(233, 30, 99, 0.1);
+}
+.top-select__item:nth-child(5):hover {
+  background: rgba(255, 225, 105, 0.1);
+}
+.top-select__item:nth-child(6):hover {
+  background: rgba(72, 52, 212, 0.1);
+}
+.top-select__item:nth-child(7):hover {
+  background: rgba(85, 248, 85, 0.1);
+}
+.top-select__item:nth-child(8):hover {
+  background: rgba(4, 3, 32, 0.1);
+}
+.top-select__item:nth-child(9):hover {
+  background: rgba(5, 196, 107, 0.1);
+}
+.top-select__item:nth-child(10):hover {
+  background: rgba(144, 48, 221, 0.1);
+}
+.top-select__item:nth-child(11):hover {
+  background: rgba(255, 121, 63, 0.1);
+}
+.first-section {
+  background-color: #F1F5F8;
+  padding-top: 89px;
+}
+
 .navigation .dribbble-logo svg path:first-child {
   fill: none;
 }
@@ -524,10 +609,6 @@ body.lock {
   .button {
     width: 100%;
   }
-}
-
-.first-section {
-  background-color: #F1F5F8;
 }
 
 .features-01__container {
