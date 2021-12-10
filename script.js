@@ -1,3 +1,5 @@
+let body = document.querySelector('body');
+
 document.querySelector('.navigation__burger').onclick=function() {
 document.querySelector('.navigation__burger').classList.toggle('active');
 document.querySelector('.navigation__mobile-menu').classList.toggle('active');
@@ -10,8 +12,8 @@ for (let i = colorItems.length - 1; i >= 0; i--) {
 	colorItems[i].onclick = function() {
 		for (let i = colorItems.length - 1; i >= 0; i--) {
 				colorItems[i].classList.remove('selected-color');
-			}
-			this.classList.add('selected-color');
 		}
-	
+		this.classList.add('selected-color');
+		body.classList="style-"+(i+1);
+	}	
 }
