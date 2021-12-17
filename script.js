@@ -1,17 +1,29 @@
+(function(){
+
 let body = document.querySelector('body');
 let menu = document.querySelector('.menu');
 let menuText = document.querySelector('.menu__text');
 let swatch = document.querySelector('.menu__swatch');
 let website = document.querySelector('.website');
-let color;
-let message;
-let menuOffsetX = 16;
-let menuOffsetY = 24;
-let messageOffsetX = 23;
-let messageOffsetY = 20;
+let color = '#ffffff';
+let message = document.querySelector('.menu__message-hex');
+let message2 = document.querySelector('.menu__message-css');
+let menuInitialOffsetX = 36;
+let menuOffsetX = 36;
+let menuInitialOffsetY = -25 -89;
+let menuOffsetY = -25 -89;
 let topBar = document.querySelector('.top-select');
 let firstSection = document.querySelector('.first-section');
 let features = document.querySelector('.first-section');
+let prevcolor = `#ffffff`
+let timer;
+let emojis = ['😉','🔥','✌️','🚀','💪'];
+let image = document.querySelector('.hero__image-box');
+let reversedX = false;
+let menuWidth;
+let mouseX = 0;
+let mouseY = 0;
+
 
 //Burger menu
 
@@ -41,6 +53,12 @@ for (let i = colorItems.length - 1; i >= 0; i--) {
 }
 
 //Copy color to clipboard
+
+function getRandomInt(max) {
+  	return Math.floor(Math.random() * max);
+}
+
+
 
 const rgb2hex = (rgb) => `#${rgb.match(/^rgb\((\d+),\s*(\d+),\s*(\d+)\)$/).slice(1).map(n => parseInt(n, 10).toString(16).padStart(2, '0')).join('')}`;
 
@@ -83,17 +101,49 @@ function getColor(target) {
 }
 
 let button = document.querySelector('.button');
-console.log(button);
 
 accent = document.querySelector('.accent-word');
-console.log(accent);
-console.log(window.getComputedStyle(accent, null).getPropertyValue('color'));
 
-function destroy(target) {
-	website.removeChild(target);
+function cancel() {
+	message.classList.add('hidden');
+	message2.classList.add('hidden');
+	menuText.classList.remove('hidden');
+
+	menuWidth = parseInt(window.getComputedStyle(menu,null).getPropertyValue('width'));
+
+	if (reversedX) {
+		menuOffsetX = -36 - menuWidth;
+
+	} else {
+		menuOffsetX = 36;
+
+	}
+	menu.style.transform = `translate(${mouseX + menuOffsetX}px, ${mouseY + menuOffsetY}px)`;
+}
+
+function displayColor(color) {
+	if (color == 'linear-gradient(90deg, rgb(123, 91, 199) 0%, rgb(234, 56, 141) 100%)') {
+		return '#7B5BC7 → #EA388D';
+	}
+	if (color == 'linear-gradient(90deg, rgb(63, 250, 86) 0%, rgb(228, 230, 77) 100%)') {
+		return '#3FFA56 → #E4E64D';
+	}
+	if (color == 'linear-gradient(90deg, rgb(255, 61, 99) 0%, rgb(248, 139, 75) 100%)') {
+		return '#FF3D63 → #F88B4B';
+	}
+	if (color == 'linear-gradient(90deg, rgb(20, 152, 235) 1.64%, rgb(150, 45, 227) 100%)') {
+		return '#1498EB → #962DE3';
+	}
+	return color;
 }
 
 function clickEvent() {
+	mouseX = event.pageX;
+	mouseY = event.pageY;
+	console.log(mouseX);
+	console.log(mouseY);
+	if (event.target.closest('.menu') == null) {
+
 	if (getColor(event.target) != undefined){
 		color = getColor(event.target);
 	} else {
@@ -103,74 +153,98 @@ function clickEvent() {
 			color = window.getComputedStyle(event.target.closest('.section'), null).getPropertyValue('background-image');
 		}
 	}
+}
+	message.innerHTML = `Hex copied ${emojis[getRandomInt(5)]}`;
+	message2.innerHTML = `CSS copied ${emojis[getRandomInt(5)]}`;
 	if (event.target.closest('.navigation__burger') == null) {
+		if (event.target.closest('.menu') == null) {
+			menu.style.opacity = '1';
+		}
 	copyToClipboard(color);
-	message = document.createElement('span');
-	message.innerHTML = `<span class="material-icons" style="color: #05C46B; font-size: 18px;">check_circle</span> Copied!`;
-	message.classList = 'message';
-	message.style.top = event.pageY - messageOffsetY + 'px';
-	message.style.left = event.pageX + messageOffsetX + 'px';
-	website.appendChild(message);
-	setTimeout(destroy, 500, message);
+	if (color == 'linear-gradient(90deg, rgb(123, 91, 199) 0%, rgb(234, 56, 141) 100%)' || 
+		color == 'linear-gradient(90deg, rgb(63, 250, 86) 0%, rgb(228, 230, 77) 100%)' || 
+		color == 'linear-gradient(90deg, rgb(255, 61, 99) 0%, rgb(248, 139, 75) 100%)' || 
+		color == 'linear-gradient(90deg, rgb(20, 152, 235) 1.64%, rgb(150, 45, 227) 100%)'){
+		message2.classList.remove('hidden');
+		message.classList.add('hidden');
+	} else {
+		message.classList.remove('hidden');
+		message2.classList.add('hidden');
 	}
-	menu.style.left = event.pageX + menuOffsetX + 'px';
-	menu.style.top = event.pageY + menuOffsetY + 'px';
-	menu.style.opacity = '1';
+	
+	menuText.classList.add('hidden');
+
+	menuWidth = parseInt(window.getComputedStyle(menu,null).getPropertyValue('width'));
+	if (reversedX) {
+		menuOffsetX = -36 - menuWidth;
+
+	} else {
+		menuOffsetX = 36;
+
+	}
+	
+
+	if (timer != undefined) {
+		clearTimeout(timer);
+	}
+	timer = setTimeout(cancel, 600);
+	
+	
+	}
+
+	
+	menu.style.transform = `translate(${mouseX + menuOffsetX}px, ${mouseY + menuOffsetY}px)`;
 	event.preventDefault();
 	event.stopPropagation();
 }
 
-//firstSection.style.background = 'linear-gradient(90deg, #7B5BC7 0%, #EA388D 100%);';
 function mouseMoveEvent() {
-	if (getColor(event.target) != undefined){
-		color = getColor(event.target);
-	} else {
-		if (window.getComputedStyle(event.target.closest('.section'), null).getPropertyValue('background-color') != 'rgba(0, 0, 0, 0)') {
-			color = getProperty(event.target.closest('.section'), 'background-color');
+	mouseX = event.pageX;
+	mouseY = event.pageY;
+	if (event.target.closest('.menu') == null) {
+		menu.style.opacity = '1';
+		if (getColor(event.target) != undefined){
+			color = getColor(event.target);
 		} else {
-
-			color = window.getComputedStyle(event.target.closest('.section'), null).getPropertyValue('background-image');
+			if (window.getComputedStyle(event.target.closest('.section'), null).getPropertyValue('background-color') != 'rgba(0, 0, 0, 0)') {
+				color = getProperty(event.target.closest('.section'), 'background-color');
+			} else {
+				color = window.getComputedStyle(event.target.closest('.section'), null).getPropertyValue('background-image');
+			}
 		}
-	}
+	} 
+
+
+
 	if (event.target.closest('.navigation__burger') == null) {
-		menuText.innerHTML = color;
-		swatch.style.background = color;
-		swatch.classList.remove('hide');
+		if (color != prevcolor) {
+			menuText.innerHTML = displayColor(color);
+			swatch.style.background = color;
+			prevcolor = color;
+		}
+		
+		
 	} else {
-		menuText.innerHTML = 'Click to open ☝️';
-		swatch.classList.add('hide');
+		hideMenu();
 	}
 
-	menu.style.opacity = '1';
-	menu.style.left = event.pageX + menuOffsetX + 'px';
-	menu.style.top = event.pageY + menuOffsetY + 'px';
-	if (document.querySelector('.message') != undefined) {
-		message.style.top = event.pageY - messageOffsetY + 'px';
-		message.style.left = event.pageX + messageOffsetX + 'px';
+	menu.style.transform = `translate(${mouseX + menuOffsetX}px, ${mouseY + menuOffsetY}px)`;
+
+	menuWidth = parseInt(window.getComputedStyle(menu,null).getPropertyValue('width'));
+	if ((menuWidth + mouseX + menuInitialOffsetX) >= document.documentElement.clientWidth) {
+		menuOffsetX = -36 - menuWidth;
+		reversedX = true;
+	} else {
+		menuOffsetX = 36;
+		reversedX = false;
 	}
 
-	if (website.clientWidth - event.pageX < 150) {
-		menuOffsetX = -120;
-		messageOffsetX = -113;
-	} else {
-		menuOffsetX = 16;
-		messageOffsetX = 23;
-	}
 
-	if (website.clientHeight - event.pageY < 100) {
-		menuOffsetY = -50;
-		messageOffsetY = 93;
-	} else {
-		menuOffsetY = 24;
-		messageOffsetY = 20;
-	}
 }
 
 function hideMenu() {
 	menu.style.opacity = '0';
 }
-
-
 
 website.addEventListener('click', clickEvent);
 website.addEventListener('mousemove', mouseMoveEvent);
@@ -186,7 +260,7 @@ function copyToClipboard(text) {
     document.body.removeChild(dummy);
 }
 
-
+})();
 
 
 
