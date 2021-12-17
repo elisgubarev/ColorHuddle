@@ -23,6 +23,7 @@ let reversedX = false;
 let menuWidth;
 let mouseX = 0;
 let mouseY = 0;
+let touch = window.matchMedia('(max-width: 1024px)');
 
 
 //Burger menu
@@ -53,6 +54,7 @@ for (let i = colorItems.length - 1; i >= 0; i--) {
 }
 
 //Copy color to clipboard
+
 
 function getRandomInt(max) {
   	return Math.floor(Math.random() * max);
@@ -140,8 +142,6 @@ function displayColor(color) {
 function clickEvent() {
 	mouseX = event.pageX;
 	mouseY = event.pageY;
-	console.log(mouseX);
-	console.log(mouseY);
 	if (event.target.closest('.menu') == null) {
 
 	if (getColor(event.target) != undefined){
@@ -154,8 +154,10 @@ function clickEvent() {
 		}
 	}
 }
-	message.innerHTML = `Hex copied ${emojis[getRandomInt(5)]}`;
-	message2.innerHTML = `CSS copied ${emojis[getRandomInt(5)]}`;
+	message.innerHTML = `Hex copied ${emojis[getRandomInt(emojis.length)]}`;
+	message2.innerHTML = `CSS copied ${emojis[getRandomInt(emojis.length)]}`;
+
+
 	if (event.target.closest('.navigation__burger') == null) {
 		if (event.target.closest('.menu') == null) {
 			menu.style.opacity = '1';
@@ -167,9 +169,35 @@ function clickEvent() {
 		color == 'linear-gradient(90deg, rgb(20, 152, 235) 1.64%, rgb(150, 45, 227) 100%)'){
 		message2.classList.remove('hidden');
 		message.classList.add('hidden');
+
+		if (touch.matches) {
+			let tooltip = document.createElement("div");
+		    document.body.appendChild(tooltip);
+		    tooltip.classList="tooltip";
+		    tooltip.innerHTML = `<span class="menu__message-hex">CSS copied ${emojis[getRandomInt(emojis.length)]}</span>`;
+		    tooltip.style.left = `${mouseX - (parseInt(window.getComputedStyle(tooltip,null).getPropertyValue('width')))/2}px`;
+		    tooltip.style.top = `${mouseY - 70}px`;
+		    tooltip.style.width = '127px';
+		    setTimeout(destroy, 400, tooltip);
+		    
+    	}
+
 	} else {
 		message.classList.remove('hidden');
 		message2.classList.add('hidden');
+
+		if (touch.matches) {
+			let tooltip = document.createElement("div");
+		    document.body.appendChild(tooltip);
+		    tooltip.classList="tooltip";
+		    tooltip.innerHTML = `<span class="menu__message-hex">Hex copied ${emojis[getRandomInt(emojis.length)]}</span>`;
+		    tooltip.style.left = `${mouseX - (parseInt(window.getComputedStyle(tooltip,null).getPropertyValue('width')))/2}px`;
+		    tooltip.style.top = `${mouseY - 70}px`;
+		    tooltip.style.width = '129px';
+		    setTimeout(destroy, 400, tooltip);
+		    
+    	}
+
 	}
 	
 	menuText.classList.add('hidden');
@@ -244,6 +272,10 @@ function mouseMoveEvent() {
 
 function hideMenu() {
 	menu.style.opacity = '0';
+}
+
+function destroy(target) {
+	document.body.removeChild(target);
 }
 
 website.addEventListener('click', clickEvent);
