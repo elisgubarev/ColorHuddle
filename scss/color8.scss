@@ -1,0 +1,168 @@
+body.style-8 {
+    color: $neutral-700_8;
+    h1, h2, h3 {
+        color: $neutral-900_8;
+    }
+    background: $neutral-50_8;
+
+
+    .first-section {
+        background: $neutral-50_8;
+    }
+  .col-accent {
+        fill: $neutral-50_8;
+    }
+    .col-neutral {
+        fill: $neutral-900_8;
+    }
+    .navigation {
+        &__mobile-menu {
+            background: $neutral-50_8;
+        }
+        &__logo-image {
+            path {
+                fill: $neutral-900_8;
+        }
+        }
+        &__name {
+            color: $neutral-900_8;
+        }
+    .dribbble-logo {
+        path {
+            &:first-child {
+                fill: none;
+            }
+            &:last-child {
+                fill: $neutral-900_8;
+            }
+        }
+    }
+    .linkedin-logo {
+        path {
+            fill: $neutral-900_8;
+        }
+    }
+        &__burger {
+            &:before, &:after, span {
+                background-color: $neutral-900_8;
+            }
+        }
+        &__link {
+            color: $neutral-900_8;
+        }
+
+    }
+    .hero .accent-word{
+     //   color: $primary_6;
+    }
+    .features-01 .accent-word{
+        //color: $primary_5;
+    }
+    .button {
+        background-color: $neutral-900_8;
+        color: $neutral-50_8;
+        &_ghost {
+            background: $neutral-50_8;
+            color: $neutral-900_8;
+        }
+        &_ghost:hover {
+            //color: #000;
+            //opacity: 0.7;
+        }
+        &_primary:hover {
+            //background-color: #000;
+            //opacity: 0.85;
+        }
+        &_reverse {
+            background-color: $neutral-900_8;
+            color: $neutral-50_8;
+            }
+        &_reverse:hover {
+            //background-color: #000;
+            //opacity: 0.85;
+        }
+    }
+    .features-01 {
+        background: $neutral-100_8;
+        &__title {
+            color: $neutral-900_8;
+        }
+        &__subtitle {
+            color: $neutral-700_8;
+        }
+    }
+    .feature-item {
+        &__link {
+            color: $neutral-900_8;
+            &:hover {
+                //color: $neutral-100_6;
+                //opacity: 0.7;
+                path {
+                    //stroke: $neutral-100_6;
+                    //opacity: 0.7;
+                }
+            }
+        }
+        &__link-icon {
+            path {
+                stroke: $neutral-900_8;
+            }
+        }
+        &__icon {
+            path {
+                fill: $neutral-900_8;
+            }
+        }
+        &__subtitle {
+            color: $neutral-700_8;
+        }
+        &__h3-title {
+            color: $neutral-900_8;
+        }
+    }
+    .emphasis {
+        color: $neutral-900_8;
+    }
+    .gallery {
+        background: $neutral-50_8;
+    }
+        .cta {
+        background: $neutral-100_8;
+        &__subtitle {
+            //color: $white;
+        }
+        
+        &__title {
+            //color: $white;
+        }
+    }
+    .footer {
+        background: $neutral-50_8;
+        &__description-text {
+            //color: $neutral-400_6;
+        }
+        &__link {
+            color: $neutral-700_8;
+        }
+        &__h3-title {
+            //color: $neutral-900_6;
+        }
+        &__bottom {
+            border-top: 1px solid rgba(4, 3, 32, 0.2);
+        }
+        &__author {
+           //color: $neutral-400_6;
+        }
+        &__info {
+            color: $neutral-700_8;
+        }
+        &__logo {
+            path {
+                fill: $neutral-900_8;
+            }
+        }
+    }
+    .last-section {
+        //background: $primary-50_6;
+    }
+}

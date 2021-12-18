@@ -1,0 +1,140 @@
+body.style-9 {
+    color: $neutral-700_9;
+    h1, h2, h3 {
+        color: $neutral-900_9;
+    }
+    background: $neutral-50_9;
+    .first-section {
+        background: $neutral-50_9;
+    }
+  .col-accent {
+        fill: $primary_9;
+    }
+    .col-neutral {
+        fill: $neutral-900_9;
+    }
+    .navigation {
+        &__mobile-menu {
+            background: $neutral-50_9;
+        }
+        &__logo-image {
+            path {
+                fill: $primary_9;
+            }
+        }
+        &__name {
+            color: $neutral-900_9;
+        }
+    .dribbble-logo {
+        path {
+            &:first-child {
+                fill: none;
+            }
+            &:last-child {
+                fill: $neutral-900_9;
+            }
+        }
+    }
+    .linkedin-logo {
+        path {
+            fill: $neutral-900_9;
+        }
+    }
+        &__burger {
+            &:before, &:after, span {
+                background-color: $neutral-900_9;
+            }
+        }
+        &__link {
+            color: $neutral-900_9;
+        }
+    }
+    .accent-word {
+        color: $primary_9;
+    }
+    .button {
+        background-color: $primary_9;
+        color: $neutral-50_9;
+        &_ghost {
+            background: $neutral-50_9;
+            color: $primary-9;
+        }
+        &_ghost:hover {
+            //color: #0AA65D;
+        }
+        &_primary:hover {
+            //background-color: #0AA65D;
+        }
+        &_reverse {
+            background: $neutral-50_9;
+            color: $neutral-900_9;
+        }
+        &_reverse:hover {
+            //background-color: #ECECEC;
+        }
+    }
+    .features-01 {
+        background: $primary-50_9;
+    }
+    .feature-item {
+        &__link {
+            color: $primary_9;
+            &:hover {
+                //color: #0AA65D;
+                path {
+                    //stroke: #0AA65D;
+                }
+            }
+        }
+        &__link-icon {
+            path {
+                stroke: $primary_9;
+            }
+        }
+        &__icon {
+            path {
+                fill: $primary_9;
+            }
+        }
+    }
+    .emphasis {
+        color: $primary_9;
+    }
+    .gallery {
+        background: $neutral-50_9;
+    }
+    .cta {
+        background: $primary_9;
+        color: $neutral-50_9;
+        &__subtitle {
+            color: $neutral-50_9;
+        }
+        &__title {
+            color: $neutral-50_9;
+        }
+    }
+    .footer {
+        background: $neutral-50_9;
+        &__description-text {
+
+        }
+        &__link {
+            color: $neutral-700_9;
+        }
+        &__bottom {
+            border-top: 1px solid rgba(43, 46, 74, 0.12);
+        }
+        &__author {
+            color: $neutral-200_9;
+        }
+        &__info {
+            color: $neutral-200_9;
+        }
+        &__logo {
+            path {
+                fill: $primary_9;
+            }
+        }
+    }
+
+}

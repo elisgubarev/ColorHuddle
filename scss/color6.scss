@@ -1,0 +1,163 @@
+body.style-6 {
+    color: $neutral-800_6;
+    h1, h2, h3 {
+        color: $neutral-900_6;
+    }
+    background: $white;
+
+
+    .first-section {
+        background: $primary-50_6;
+    }
+  .col-accent {
+        fill: $primary_6;
+    }
+    .col-neutral {
+        fill: $neutral-900_6;
+    }
+    .navigation {
+        &__mobile-menu {
+            background: $primary-50_6;
+        }
+        &__logo-image {
+            path {
+                fill: $primary_6;
+        }
+        }
+        &__name {
+            color: $neutral-900_6;
+        }
+    .dribbble-logo {
+        path {
+            &:first-child {
+                fill: none;
+            }
+            &:last-child {
+                fill: $neutral-900_6;
+            }
+        }
+    }
+    .linkedin-logo {
+        path {
+            fill: $neutral-900_6;
+        }
+    }
+        &__burger {
+            &:before, &:after, span {
+                background-color: $neutral-900_6;
+            }
+        }
+        &__link {
+            color: $neutral-900_6;
+        }
+
+    }
+    .hero .accent-word{
+        color: $primary_6;
+    }
+    .features-01 .accent-word{
+        //color: $primary_5;
+    }
+    .button {
+        background-color: $primary_6;
+        color: $white;
+        &_ghost {
+            background: $white;
+            color: $primary_6;
+        }
+        &_ghost:hover {
+            //color: #2A14C3;
+        }
+        &_primary:hover {
+            //background-color: #2A14C3;
+        }
+        &_reverse {
+            background-color: $primary_6;
+            color: $white;
+            }
+        &_reverse:hover {
+            //background-color: #2A14C3;
+        }
+    }
+    .features-01 {
+        background: $primary_6;
+        &__title {
+            color: $white;
+        }
+        &__subtitle {
+            color: $neutral-100_6;
+        }
+    }
+    .feature-item {
+        &__link {
+            color: $white;
+            &:hover {
+                //color: $neutral-100_6;
+                path {
+                    //stroke: $neutral-100_6;
+                }
+            }
+        }
+        &__link-icon {
+            path {
+                stroke: $white
+            }
+        }
+        &__icon {
+            path {
+                fill: $white;
+            }
+        }
+        &__subtitle {
+            color: $neutral-100_6;
+        }
+        &__h3-title {
+            color: $white;
+        }
+    }
+    .emphasis {
+        color: $primary_6;
+    }
+    .gallery {
+        background: $white;
+    }
+        .cta {
+        background: $primary-50_6;
+        &__subtitle {
+            //color: $white;
+        }
+        
+        &__title {
+            //color: $white;
+        }
+    }
+    .footer {
+        background: $primary-50_6;
+        &__description-text {
+            color: $neutral-400_6;
+        }
+        &__link {
+            color: $neutral-800_6;
+        }
+        &__h3-title {
+            color: $neutral-900_6;
+        }
+        &__bottom {
+            border-top: 1px solid rgba(4, 3, 32, 0.2);
+        }
+        &__author {
+           color: $neutral-400_6;
+        }
+        &__info {
+            color: $neutral-400_6;
+        }
+        &__logo {
+            path {
+                fill: $primary_6;
+            }
+        }
+    }
+    .last-section {
+        background: $primary-50_6;
+    }
+}

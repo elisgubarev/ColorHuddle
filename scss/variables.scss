@@ -1,0 +1,238 @@
+%text-style__body {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+}
+
+%text-style__logo {
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 24px;
+}
+
+%text-style__link {
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 16px;
+}
+%text-style__h1h2 {
+    font-size: 56px;
+    font-weight: 700;
+    line-height: 64px;
+}
+%text-style__h3 {
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 24px;
+}
+%text-style__button {
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 17px;
+    text-transform: uppercase;
+    font-family: 'Montserrat', sans-serif;
+    letter-spacing: 0.12em;
+}
+%text-style__emphasis {
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 24px;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+}
+
+%text-style__footer {
+    font-size: 12px;
+    line-height: 16px;
+    font-weight: 400;
+}
+
+%text-style__label {
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 12px;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+}
+
+%flex-row {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+%hover-opacity {
+    &:hover {
+            opacity:0.7;
+       }
+    transition: opacity 0.15s ease;
+}
+
+
+
+
+//Mixins
+
+@mixin flex-space($sp) {
+    margin-right: $sp;
+    &:last-child {margin-right:0;}
+}
+@mixin limit-width($wdt) {
+    max-width: $wdt;
+    margin-left: auto;
+    margin-right: auto;
+}
+@mixin select($cl, $cl2) {
+    background: $cl2;
+    color: $cl;
+    border-bottom: 5px solid $cl;
+    padding-bottom: 15px;
+}
+
+$color-tran: 0.15s;
+
+//Palette general
+
+$white: #fff;
+$black: #000;
+
+//Palette #1
+
+$neutral-900:#2B2E4A;
+$neutral-400:#6E6F81;
+$neutral-50: #F4F5F6;
+$primary: #3742FA;
+$primary-dark: #2E38EA;
+$primary-hover: rgba(55,66,250,0.1);
+
+
+//Palette #2
+
+$neutral-900_2: #172126;
+$neutral-800_2: #676B6F;
+$neutral-700_2: #8B9EA9;
+$neutral-100_2: #E9EEF2;
+$neutral-50_2: #F1F5F8;
+$primary_2: #EE5253;
+$primary-dark_2: #D44445;
+$primary-hover_2: rgba(238,82,83,0.1);
+
+//Palette #3
+
+$neutral-900_3: #1E1633;
+$neutral-800_3: #130F40;
+$neutral-500_3: #93A3B6;
+$neutral-50_3: #FEF8FD;
+
+$primary_3: rgba(255,236,120,1);
+$primary-dark_3: #F3DA42;
+$primary-hover_3: #39303B;
+
+
+//Palette #4
+
+$neutral-900_4: #2B2E4A;
+$neutral-400_4: #6C6D7F;
+$neutral-50_4: #F2F2F2;
+
+$primary_4: rgba(233,30,99,1);
+$primary-hover_4: rgba(233,30,99,0.1);
+
+//Palette #5
+
+$neutral-600_5: #999999;
+
+$primary_5: rgba(255,225,105,1);
+$primary-hover_5: #1F1B0D;
+
+//Palette #6
+
+$neutral-900_6: #040320;
+$neutral-800_6: #434157;
+$neutral-400_6: #9391A5;
+$neutral-100_6: #DBD5F0;
+
+$primary_6: rgba(72,52,212,1);
+$primary-50_6: #F3EFFD;
+$primary-hover_6: rgba(72,52,212,0.1);
+
+//Palette #7
+
+$neutral-700_7: #787D82;
+$neutral-100_7: #F8FAFC;
+
+$primary_7: #E6398F;
+$primary-hover_7: #2E0B1D;
+
+$secondary-green_7: #41FA56;
+$secondary-orange_7: #F88B4B;
+
+$gradient-ptm_7: linear-gradient(90deg, #7B5BC7 0%, #EA388D 100%);
+$gradient-gty_7: linear-gradient(90deg, #3FFA56 0%, #E4E64D 100%);
+$gradient-rto_7: linear-gradient(90deg, #FF3D63 0%, #F88B4B 100%);
+
+
+//Palette #8
+
+$neutral-900_8: #040320;
+$neutral-700_8: #646476;
+$neutral-100_8: #EEEEEE;
+$neutral-50_8: #F5F5F5;
+
+$primary_8: #2B2E4A;
+$primary-hover_8: rgba(4, 3, 32, 0.1);
+
+//Palette #9
+
+$neutral-900_9: #2B2E4A;
+$neutral-700_9: #666A7B;
+$neutral-200_9: #BFC0C7;
+$neutral-50_9: #FAFAFA;
+
+$primary_9: rgba(5, 196, 107, 1);
+$primary-50_9: #F0F5ED;
+$primary-hover_9: rgba(5, 196, 107, 0.1);
+
+//Palette #10
+
+$neutral-900_10: #2B2E4A;
+$neutral-400_10: #6E6F81;
+$neutral-50_10: #F9F9FB;
+
+
+$primary_10: #3867D6;
+$primary-50_10: #F0F4FF;
+$primary-hover_10: rgba(56, 103, 214, 0.1);
+
+$secondary_10: #9030DD;
+$secondary-50_10: #F8F0FF;
+
+$gradient-btp_10: linear-gradient(90deg, #1498EB 1.64%, #962DE3 100%);
+
+//Palette #11
+
+$neutral-900_11: #0F4189;
+$neutral-700_11: #666A7B;
+$neutral-400_11: #87A0C4;
+$neutral-50_11: #F2F8FF;
+
+$primary_11: rgba(255, 121, 63, 1);
+$primary-hover_11: rgba(255, 121, 63, 0.1);
+
+
+
+// Breakpoints
+$br__footer: 1000px;
+$br__navigation: 900px;
+$br__tablet: 768px;
+$br__mobile: 576px;
+
+//Animations
+
+@keyframes fade-in {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}

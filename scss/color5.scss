@@ -1,0 +1,163 @@
+body.style-5 {
+    color: $black;
+    h1, h2, h3 {
+        color: $black;
+    }
+    background: $primary_5;
+
+
+    .first-section {
+        background: $primary_5;
+    }
+  .col-accent {
+        fill: none;
+    }
+    .col-neutral {
+        fill: $black;
+    }
+    .navigation {
+        &__mobile-menu {
+            background: $primary_5;
+        }
+        &__logo-image {
+            path {
+                fill: $black;
+        }
+        }
+        &__name {
+            color: $black;
+        }
+    .dribbble-logo {
+        path {
+            &:first-child {
+                fill: none;
+            }
+            &:last-child {
+                fill: $black;
+            }
+        }
+    }
+    .linkedin-logo {
+        path {
+            fill: $black;
+        }
+    }
+        &__burger {
+            &:before, &:after, span {
+                background-color: $black;
+            }
+        }
+        &__link {
+            color: $black;
+        }
+
+    }
+    .hero .accent-word{
+        color: $white;
+    }
+    .features-01 .accent-word{
+        color: $primary_5;
+    }
+    .button {
+        background-color: $black;
+        color: $white;
+        &_ghost {
+            background: $primary_5;
+            color: $black;
+        }
+        &_ghost:hover {
+            //color: #303030;
+        }
+        &_primary:hover {
+            //background-color: #303030;
+        }
+        &_reverse {
+            background-color: $primary_5;
+            color: $black;
+            }
+        &_reverse:hover {
+            //background-color: #EDCE55;
+        }
+    }
+    .features-01 {
+        background: $black;
+        &__title {
+            color: $white;
+        }
+        &__subtitle {
+            color: $white;
+        }
+    }
+    .feature-item {
+        &__link {
+            color: $primary_5;
+            &:hover {
+                //color: #EDCE55;
+                path {
+                    //stroke: #EDCE55;
+                }
+            }
+        }
+        &__link-icon {
+            path {
+                stroke: $primary_5;
+            }
+        }
+        &__icon {
+            path {
+                fill: $primary_5;
+            }
+        }
+        &__subtitle {
+            color: $white;
+        }
+        &__h3-title {
+            color: $white;
+        }
+    }
+    .emphasis {
+        color: $black;
+    }
+    .gallery {
+        background: $primary_5;
+    }
+    .cta {
+        background: $black;
+        &__subtitle {
+            color: $white;
+        }
+        
+        &__title {
+            color: $white;
+        }
+    }
+    .footer {
+        background: $black;
+        &__description-text {
+            color: $neutral-600_5;
+        }
+        &__link {
+            color: $neutral-600_5;
+        }
+        &__h3-title {
+            color: $white;
+        }
+        &__bottom {
+            border-top: 1px solid rgba(255, 255, 255, 0.4);
+        }
+        &__author {
+           color: $neutral-600_5;
+        }
+        &__info {
+            color: $neutral-600_5;
+        }
+        &__logo {
+            path {
+                fill: $primary_5;
+            }
+        }
+    }
+    .last-section {
+        background: $black;
+    }
+}

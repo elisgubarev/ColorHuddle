@@ -1,0 +1,208 @@
+body.style-7 {
+    color: $neutral-700_7;
+    h1, h2, h3 {
+        color: $neutral-100_7;
+    }
+    background: $black;
+
+
+    .first-section {
+        background: $black;
+
+            .col-accent {
+        fill: $primary_7;
+    }
+    .col-neutral {
+        fill: $neutral-100_7;
+    }
+    }
+
+    .gallery-1 {
+                    .col-accent {
+        fill: $secondary-green_7;
+    }
+    .col-neutral {
+        fill: $neutral-100_7;
+    }
+    }
+
+        .gallery-2 {
+                    .col-accent {
+        fill: $secondary-orange_7;
+    }
+    .col-neutral {
+        fill: $neutral-100_7;
+    }
+    }
+
+    .navigation {
+        &__mobile-menu {
+            background: $black;
+        }
+        &__logo-image {
+            path {
+                fill: $primary_7;
+        }
+        }
+        &__name {
+            color: $neutral-100_7;
+        }
+    .dribbble-logo {
+        path {
+            &:first-child {
+                fill: none;
+            }
+            &:last-child {
+                fill: $neutral-100_7;
+            }
+        }
+    }
+    .linkedin-logo {
+        path {
+            fill: $neutral-100_7;
+        }
+    }
+        &__burger {
+            &:before, &:after, span {
+                background-color: $neutral-100_7;
+            }
+        }
+        &__link {
+            color: $neutral-100_7;
+        }
+
+    }
+    .accent-word{
+        background: $gradient-ptm_7;
+        color:  transparent;
+        background-clip: text;
+        -webkit-background-clip: text;
+    }
+    .features-01 .accent-word{
+        //color: $primary_5;
+    }
+    .button {
+        background: $gradient-ptm_7;
+        color: $neutral-100_7;
+        &_ghost {
+
+        }
+        &_ghost:hover {
+            
+        }
+        &_primary:hover {
+            //opacity: 0.85;
+        }
+        &_reverse {
+            background: $black;
+            color: $neutral-100_7;
+            }
+        &_reverse:hover {
+            //opacity: 0.85;
+        }
+    }
+    .gallery-1 .button_ghost {
+            background: $black;
+            color: $secondary-green_7;
+            &:hover {
+                //color: #2BDA3F;
+            }
+    }
+    .gallery-2 .button_ghost {
+            background: $black;
+            color: #FB6856;
+            &:hover {
+                //color: #E24F3D;
+            }
+    }
+    .features-01 {
+        background-color: $black;
+        &__title {
+            color: $neutral-100_7;
+        }
+        &__subtitle {
+            color: $neutral-700_7;
+        }
+    }
+    .feature-item {
+        &__link {
+            color: $neutral-100_7;
+            &:hover {
+                //color: #C3C3C3;
+                path {
+                    //stroke: #C3C3C3;
+                }
+            }
+        }
+        &__link-icon {
+            path {
+                stroke: $neutral-100_7;
+            }
+        }
+        &__icon {
+            path {
+                fill: $primary_7;
+            }
+        }
+        &__subtitle {
+            color: $neutral-700_7;
+        }
+        &__h3-title {
+            color: $neutral-100_7;
+        }
+    }
+    .gallery-1 .emphasis {
+        background: $gradient-gty_7;
+        color:  transparent;
+        background-clip: text;
+        -webkit-background-clip: text;
+    }
+    .gallery-2 .emphasis {
+        background: $gradient-rto_7;
+        color:  transparent;
+        background-clip: text;
+        -webkit-background-clip: text;
+    }
+    .gallery {
+        background: $black;
+    }
+        .cta {
+        background: $gradient-ptm_7;
+        &__subtitle {
+            color: $neutral-100_7;
+        }
+        
+        &__title {
+            color: $neutral-100_7;
+        }
+    }
+    .footer {
+        background: $black;
+        &__description-text {
+            
+        }
+        &__link {
+            color: $neutral-700_7;
+        }
+        &__h3-title {
+            
+        }
+        &__bottom {
+            border-top: 1px solid rgba(248, 250, 252, 0.4);
+        }
+        &__author {
+           //color: $neutral-400_6;
+        }
+        &__info {
+            color: $neutral-700_7;
+        }
+        &__logo {
+            path {
+                fill: $primary_7;
+            }
+        }
+    }
+    .last-section {
+        //background: $primary-50_6;
+    }
+}

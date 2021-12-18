@@ -17,13 +17,53 @@ let firstSection = document.querySelector('.first-section');
 let features = document.querySelector('.first-section');
 let prevcolor = `#ffffff`
 let timer;
-let emojis = ['😉','🔥','✌️','🚀','💪'];
+let emojis = ['😉','🔥','✌️','🚀','💪','🦄','🌈','⚡️','🦋','💖','👯‍♀️','🌞','🍬','🐯'];
 let image = document.querySelector('.hero__image-box');
 let reversedX = false;
 let menuWidth;
 let mouseX = 0;
 let mouseY = 0;
 let touch = window.matchMedia('(max-width: 1024px)');
+let button1 = document.querySelector('.button_primary');
+let tick = 1;
+let buttonText = ['Click me',
+				'Color copied!',
+				'Awesome!',
+				"You're doing great!",
+				"Noice 👌",
+				"Great job!",
+				"Keep going!",
+				"Lovely!",
+				"Amazing!",
+				"Bellissimo! 🇮🇹",
+				"Bien joué! 🇫🇷",
+				"Gut gemacht! 🇩🇪",
+				"¡Bien hecho! 🇪🇸",
+				"Aferin! 🇹🇷",
+				"Dobra robota! 🇵🇱",
+				"Молодец! 🇷🇺",
+				"अच्छा कार्य 🇮🇳",
+				"Bra jobbat! 🇸🇪",
+				"You can click something else too!",
+				"Like headlines",
+				"Or text",
+				"Even illustrations!",
+				"No seriously",
+				"You can stop now",
+				"This is getting weird",
+				"But who am I to judge",
+				"I'm just a button",
+				"I'm gonna reset now",
+				'Click me',
+				'Color copied!',
+				'Awesome!',
+				'OMG you still doing it??',
+				'You are persistent',
+				'I like it',
+				'Ok fine',
+				'Take it',
+				"It's yours now",
+				'🍪'];
 
 
 //Burger menu
@@ -54,7 +94,6 @@ for (let i = colorItems.length - 1; i >= 0; i--) {
 }
 
 //Copy color to clipboard
-
 
 function getRandomInt(max) {
   	return Math.floor(Math.random() * max);
@@ -157,6 +196,19 @@ function clickEvent() {
 	message.innerHTML = `Hex copied ${emojis[getRandomInt(emojis.length)]}`;
 	message2.innerHTML = `CSS copied ${emojis[getRandomInt(emojis.length)]}`;
 
+		if (event.target.closest('.navigation__burger') == null) {
+		if (color != prevcolor) {
+			menuText.innerHTML = displayColor(color);
+			swatch.style.background = color;
+			prevcolor = color;
+		}
+		
+		
+	} else {
+		hideMenu();
+	}
+
+
 
 	if (event.target.closest('.navigation__burger') == null) {
 		if (event.target.closest('.menu') == null) {
@@ -172,13 +224,18 @@ function clickEvent() {
 
 		if (touch.matches) {
 			let tooltip = document.createElement("div");
+			let tooltipSwatch = document.createElement("span");
 		    document.body.appendChild(tooltip);
 		    tooltip.classList="tooltip";
-		    tooltip.innerHTML = `<span class="menu__message-hex">CSS copied ${emojis[getRandomInt(emojis.length)]}</span>`;
+		    tooltipSwatch.classList="menu__swatch";
+		    tooltip.innerHTML = `<span class="menu__message-hex">CSS copied!</span>`;
 		    tooltip.style.left = `${mouseX - (parseInt(window.getComputedStyle(tooltip,null).getPropertyValue('width')))/2}px`;
 		    tooltip.style.top = `${mouseY - 70}px`;
-		    tooltip.style.width = '127px';
+		   	tooltipSwatch.style.background = color;
+		    tooltip.prepend(tooltipSwatch);
+		    tooltip.style.width = '136px';
 		    setTimeout(destroy, 400, tooltip);
+		    //console.log(window.getComputedStyle(tooltip,null).getPropertyValue('width'));
 		    
     	}
 
@@ -188,14 +245,19 @@ function clickEvent() {
 
 		if (touch.matches) {
 			let tooltip = document.createElement("div");
+			let tooltipSwatch = document.createElement("span");
 		    document.body.appendChild(tooltip);
+		    
 		    tooltip.classList="tooltip";
-		    tooltip.innerHTML = `<span class="menu__message-hex">Hex copied ${emojis[getRandomInt(emojis.length)]}</span>`;
+		    tooltipSwatch.classList="menu__swatch";
+		    tooltip.innerHTML = `</span><span class="menu__message-hex">Hex copied!</span>`;
 		    tooltip.style.left = `${mouseX - (parseInt(window.getComputedStyle(tooltip,null).getPropertyValue('width')))/2}px`;
 		    tooltip.style.top = `${mouseY - 70}px`;
-		    tooltip.style.width = '129px';
+		    tooltipSwatch.style.background = color;
+		    tooltip.prepend(tooltipSwatch);
+		    tooltip.style.width = '138px';
 		    setTimeout(destroy, 400, tooltip);
-		    
+		    //console.log(window.getComputedStyle(tooltip,null).getPropertyValue('width'));
     	}
 
 	}
@@ -219,9 +281,16 @@ function clickEvent() {
 	
 	
 	}
-
 	
 	menu.style.transform = `translate(${mouseX + menuOffsetX}px, ${mouseY + menuOffsetY}px)`;
+
+	if (event.target.closest('.button_primary') != null) {
+			button.innerHTML = `<span class="button__text">${buttonText[tick]}</span>`;
+	tick++;
+	if (tick >= buttonText.length) {
+		tick=0;
+	}
+	}
 	event.preventDefault();
 	event.stopPropagation();
 }

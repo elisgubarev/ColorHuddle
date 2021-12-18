@@ -1,0 +1,206 @@
+body.style-10 {
+    color: $neutral-900_10;
+    h1, h2, h3 {
+        color: $neutral-900_10;
+    }
+    background: $white;
+
+
+    .first-section {
+        background: $gradient-btp_10;
+
+    .col-accent {
+        fill: none;
+    }
+    .col-neutral {
+        fill: $white;
+    }
+    }
+
+        .gallery-1 {
+                    .col-accent {
+        fill: $primary_10;
+    }
+    .col-neutral {
+        fill: $neutral-900_10;
+    }
+    }
+
+        .gallery-2 {
+                    .col-accent {
+        fill: $secondary_10
+    }
+    .col-neutral {
+        fill: $neutral-900_10;
+    }
+    }
+    .hero {
+        &__title, &__subtitle {
+            color: $white;
+        }
+    }
+
+    .navigation {
+        &__mobile-menu {
+            background: $gradient-btp_10;
+        }
+        &__logo-image {
+            path {
+                fill: $white;
+        }
+        }
+        &__name {
+            color: $white;
+        }
+    .dribbble-logo {
+        path {
+            &:first-child {
+                fill: none;
+            }
+            &:last-child {
+                fill: $white;
+            }
+        }
+    }
+    .linkedin-logo {
+        path {
+            fill: $white;
+        }
+    }
+        &__burger {
+            &:before, &:after, span {
+                background-color: $white;
+            }
+        }
+        &__link {
+            color: $white;
+        }
+
+    }
+
+    .features-01 .accent-word{
+        color: $primary_10;
+    }
+    .button {
+        background: $white;
+        color: $neutral-900_10;
+        &_ghost {
+
+        }
+        &_ghost:hover {
+            
+        }
+        &_primary:hover {
+            //background-color: #EBEBEB;
+        }
+        &_reverse {
+            background: $gradient-btp_10;
+            color: $white;
+            }
+        &_reverse:hover {
+            //opacity: 0.85;
+        }
+    }
+    .gallery-1 .button_ghost {
+            background: $primary-50_10;
+            color: $primary_10;
+            &:hover {
+                //color: #2955BB;
+            }
+    }
+    .gallery-2 .button_ghost {
+            background: $secondary-50_10;
+            color: $secondary_10;
+            &:hover {
+                //color: #7A23C0;
+            }
+    }
+    .features-01 {
+        background: $white;
+        &__title {
+            color: $neutral-900_10;
+        }
+        &__subtitle {
+            color: $neutral-900_10;
+        }
+    }
+    .feature-item {
+        &__link {
+            color: $primary_10;
+            &:hover {
+                //color: #2955BB;
+                path {
+                    //stroke: #2955BB;
+                }
+            }
+        }
+        &__link-icon {
+            path {
+                stroke: $primary_10;
+            }
+        }
+        &__icon {
+            path {
+                fill: $primary_10;
+            }
+        }
+        &__subtitle {
+            color: $neutral-900_10;
+        }
+        &__h3-title {
+            color: $neutral-900_10;
+        }
+    }
+    .gallery-1 .emphasis {
+        color: $primary_10;
+    }
+    .gallery-2 .emphasis {
+        color: $secondary_10;
+    }
+    .gallery-1 {
+        background: $primary-50_10;
+    }
+    .gallery-2 {
+        background: $secondary-50_10;
+    }
+
+        .cta {
+        background: $white;
+        &__subtitle {
+            color: $neutral-900_10;
+        }
+        
+        &__title {
+            color: $neutral-900_10;
+        }
+    }
+    .footer {
+        background: $neutral-50_10;
+        &__description-text {
+            color: $neutral-400_10;
+        }
+        &__link {
+            color: $neutral-900_10;
+        }
+        &__h3-title {
+            
+        }
+        &__bottom {
+            border-top: 1px solid #D5D5DB;
+        }
+        &__author {
+           color: $neutral-400_10;
+        }
+        &__info {
+            color: $neutral-400_10;
+        }
+        &__logo {
+            path {
+                fill: $primary_10;
+            }
+        }
+    }
+    .last-section {
+        //background: $primary-50_6;
+    }
+}

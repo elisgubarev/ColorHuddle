@@ -1,0 +1,145 @@
+body.style-3 {
+    color: $neutral-500_3;
+    h1, h2, h3 {
+        color: $neutral-50_3;
+    }
+    background: $neutral-900_3;
+
+
+    .first-section {
+        background: $neutral-800_3;
+    }
+    .col-accent {
+        fill: none;;
+    }
+    .col-neutral {
+        fill: $primary_3;
+    }
+
+    .navigation {
+        &__mobile-menu {
+            background: $neutral-800_3;
+        }
+        &__logo-image {
+            path {
+                fill: $primary_3;
+        }
+        }
+        &__name {
+            color: $neutral-50_3;
+        }
+    .dribbble-logo {
+        path {
+            &:first-child {
+                fill: none;
+            }
+            &:last-child {
+                fill: $neutral-50_3;
+            }
+        }
+    }
+    .linkedin-logo {
+        path {
+            fill: $neutral-50_3;
+        }
+    }
+        &__burger {
+            &:before, &:after, span {
+                background-color: $neutral-50_3;
+            }
+        }
+        &__link {
+            color: $neutral-50_3;
+        }
+    }
+    .accent-word {
+        color: $primary_3;
+    }
+    .button {
+        background-color: $primary_3;
+        color: $neutral-900_3;
+        &_ghost {
+            background: $neutral-900_3;
+            color: $primary_3;
+        }
+        &_ghost:hover {
+            //color: $primary-dark_3;
+        }
+        &_primary:hover {
+            //background-color: $primary-dark_3;
+        }
+        &_reverse {
+            background-color: $neutral-900_3;
+            color: $neutral-50_3;
+            }
+        &_reverse:hover {
+           // background-color: #140F22;
+        }
+    }
+    .features-01 {
+        background: $neutral-900_3;
+    }
+    .feature-item {
+        &__link {
+            color: $primary_3;
+            &:hover {
+                //color: $primary-dark_3;
+                path {
+                    //stroke: $primary-dark_3;
+                }
+            }
+        }
+        &__link-icon {
+            path {
+                stroke: $primary_3;
+            }
+        }
+        &__icon {
+            path {
+                fill: $primary_3;
+            }
+        }
+    }
+    .gallery {
+        background: $neutral-900_3;
+    }
+    .emphasis {
+        color: $primary_3;
+    }
+        .cta {
+        background: $primary_3;
+        &__subtitle {
+            color: $neutral-900_3;
+        }
+        
+        &__title {
+            color: $neutral-900_3;
+        }
+    }
+    .footer {
+        background: $neutral-900_3;
+        &__description-text {
+            color: $neutral-500_3;
+        }
+        &__link {
+            color: $neutral-500_3;
+        }
+        &__h3-title {
+            color: $neutral-50_3;
+        }
+        &__bottom {
+            border-top: 1px solid #343642;
+        }
+        &__author {
+            color: $neutral-500_3;
+        }
+        &__info {
+            color: $neutral-500_3;
+        }
+        &__logo {
+            path {
+                fill: $primary_3;
+            }
+        }
+    }
+}

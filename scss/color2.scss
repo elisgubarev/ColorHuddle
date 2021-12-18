@@ -1,0 +1,149 @@
+body.style-2 {
+    color: $neutral-800_2;
+    h1, h2, h3 {
+        color: $neutral-900_2;
+    }
+    background: $neutral-50_2;
+
+
+    .first-section {
+      background: $neutral-50_2;
+    }
+    .col-accent {
+        fill: $primary_2;
+    }
+    .col-neutral {
+        fill: $neutral-900_2;
+    }
+
+    .navigation {
+        &__mobile-menu {
+            background: $neutral-50_2;
+        }
+        &__logo-image {
+            path {
+                fill: $primary_2;
+        }
+        }
+        &__name {
+            color: $neutral-900_2;
+        }
+    .dribbble-logo {
+        path {
+            &:first-child {
+                fill: none;
+            }
+            &:last-child {
+                fill: $neutral-900_2;
+            }
+        }
+    }
+    .linkedin-logo {
+        path {
+            fill: $neutral-900_2;
+        }
+    }
+        &__burger {
+            &:before, &:after, span {
+                background-color: $neutral-900_2;
+            }
+        }
+        &__link {
+            color: $neutral-900_2;
+        }
+    }
+    .accent-word {
+        color: $primary_2;
+    }
+    .button {
+        background-color: $primary_2;
+        color: $neutral-50_2;
+        &_ghost {
+            background: $neutral-50_2;
+            color: $primary_2;
+        }
+        &_ghost:hover {
+            //color: $primary-dark_2;
+        }
+        &_primary:hover {
+           // background-color: $primary-dark_2;
+        }
+        &_reverse {
+            background-color: $primary_2;
+            color: $neutral-50_2;
+            }
+        &_reverse:hover {
+            //background-color: $primary-dark_2;
+        }
+    }
+    .features-01 {
+        background: $neutral-100_2;
+    }
+    .feature-item {
+        &__link {
+            color: $primary_2;
+            &:hover {
+                //color: $primary-dark_2;
+                path {
+                    //stroke: $primary-dark_2;
+                }
+            }
+        }
+        &__link-icon {
+            path {
+                stroke: $primary_2;
+            }
+        }
+        &__icon {
+            path {
+                fill: $primary_2;
+            }
+        }
+    }
+    .emphasis {
+        color: $primary_2;
+    }
+    .gallery {
+        background: $neutral-50_2;
+    }
+        .cta {
+        background: $neutral-900_2;
+        &__subtitle {
+            color: $neutral-700_2;
+        }
+        
+        &__title {
+            color: $neutral-50_2;
+        }
+    }
+    .footer {
+        background: $neutral-900_2;
+
+        &__description-text {
+            color: $neutral-700_2;
+        }
+        &__link {
+            color: $neutral-700_2;
+        }
+        &__h3-title {
+            color: $neutral-50_2;
+        }
+        &__bottom {
+            border-top: 1px solid rgba(139, 158, 169, 0.2);
+        }
+        &__author {
+            color: $neutral-700_2;
+        }
+        &__info {
+            color: $neutral-700_2;
+        }
+        &__logo {
+            path {
+                fill: $neutral-50_2;
+            }
+        }
+    }
+    .last-section {
+        background-color: $neutral-900_2;
+    }
+}
