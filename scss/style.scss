@@ -1075,6 +1075,7 @@ h1, h2, h3, .subtitle, .emphasis, .accent-word, .footer__description-text, .feat
     0% {
         opacity: 1;
         transform: translateY(0);
+        //top: 0;
     }
     50% {
         opacity: 1;
@@ -1082,6 +1083,7 @@ h1, h2, h3, .subtitle, .emphasis, .accent-word, .footer__description-text, .feat
     }
     100% {
         opacity: 0;
+        //top: -10px;
         transform: translateY(-10px);
     }
 }

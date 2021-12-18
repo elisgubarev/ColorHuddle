@@ -44,7 +44,7 @@ let buttonText = ['Click me',
 				"Молодец! 🇷🇺",
 				"अच्छा कार्य 🇮🇳",
 				"Bra jobbat! 🇸🇪",
-				"You can click something else too!",
+				"You can click something else",
 				"Like headlines",
 				"Or text",
 				"Even illustrations!",
@@ -229,11 +229,12 @@ function clickEvent() {
 		    tooltip.classList="tooltip";
 		    tooltipSwatch.classList="menu__swatch";
 		    tooltip.innerHTML = `<span class="menu__message-hex">CSS copied!</span>`;
+		    tooltip.prepend(tooltipSwatch);
 		    tooltip.style.left = `${mouseX - (parseInt(window.getComputedStyle(tooltip,null).getPropertyValue('width')))/2}px`;
 		    tooltip.style.top = `${mouseY - 70}px`;
 		   	tooltipSwatch.style.background = color;
-		    tooltip.prepend(tooltipSwatch);
-		    tooltip.style.width = '136px';
+		    
+		    //tooltip.style.width = '136px';
 		    setTimeout(destroy, 400, tooltip);
 		    //console.log(window.getComputedStyle(tooltip,null).getPropertyValue('width'));
 		    
@@ -251,11 +252,26 @@ function clickEvent() {
 		    tooltip.classList="tooltip";
 		    tooltipSwatch.classList="menu__swatch";
 		    tooltip.innerHTML = `</span><span class="menu__message-hex">Hex copied!</span>`;
-		    tooltip.style.left = `${mouseX - (parseInt(window.getComputedStyle(tooltip,null).getPropertyValue('width')))/2}px`;
-		    tooltip.style.top = `${mouseY - 70}px`;
-		    tooltipSwatch.style.background = color;
 		    tooltip.prepend(tooltipSwatch);
-		    tooltip.style.width = '138px';
+		    if (((parseInt(window.getComputedStyle(tooltip,null).getPropertyValue('width')))/2+mouseX+16) < document.documentElement.clientWidth) {
+		    	
+		    if (((parseInt(window.getComputedStyle(tooltip,null).getPropertyValue('width')))/2+mouseX-16) < parseInt(window.getComputedStyle(tooltip,null).getPropertyValue('width'))) {
+				tooltip.style.left = `${mouseX}px`;
+		    	tooltip.style.top = `${mouseY - 70}px`;
+			} else {
+		    	tooltip.style.left = `${mouseX - (parseInt(window.getComputedStyle(tooltip,null).getPropertyValue('width')))/2}px`;
+		   		tooltip.style.top = `${mouseY - 70}px`;
+		   	}
+		} else {
+		    	tooltip.style.left = `${mouseX - (parseInt(window.getComputedStyle(tooltip,null).getPropertyValue('width')))}px`;
+		    	tooltip.style.top = `${mouseY - 70}px`;
+		}
+		    
+		    console.log(parseInt(window.getComputedStyle(tooltip,null).getPropertyValue('width')));
+		    console.log(((parseInt(window.getComputedStyle(tooltip,null).getPropertyValue('width')))/2+mouseX-16));
+		    tooltipSwatch.style.background = color;
+		    
+		    //tooltip.style.width = '138px';
 		    setTimeout(destroy, 400, tooltip);
 		    //console.log(window.getComputedStyle(tooltip,null).getPropertyValue('width'));
     	}
