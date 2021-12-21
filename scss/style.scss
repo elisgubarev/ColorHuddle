@@ -281,7 +281,7 @@ a {
     }
     &__logo-box {
        @extend %flex-row;
-       @extend %hover-opacity;
+      // @extend %hover-opacity;
        z-index: 101;
        line-height: 0;
     }
@@ -311,7 +311,7 @@ a {
 
         //@include flex-space(24px);
         @extend %text-style__link;
-        @extend %hover-opacity;
+       // @extend %hover-opacity;
         &:hover {
             //cursor: pointer;
         }
@@ -482,6 +482,9 @@ a {
     &__icon {
         @include flex-space(16px);
         @extend %hover-opacity;
+        &:hover {
+            cursor: pointer;
+        }
         line-height: 0;
         svg {
             height: 20px;
@@ -588,9 +591,9 @@ a {
     
     &_primary:hover {
         //cursor: pointer;
-        opacity: 0.85;
-        transform: translateY(-2px); 
-        box-shadow: 0px 6px 8px -4px rgba(24, 39, 75, 0.06), 0px 12px 10px -4px rgba(24, 39, 75, 0.04);
+        //opacity: 0.85;
+        //transform: translateY(-2px); 
+        //box-shadow: 0px 6px 8px -4px rgba(24, 39, 75, 0.06), 0px 12px 10px -4px rgba(24, 39, 75, 0.04);
     }
     &_ghost {
         
@@ -601,9 +604,9 @@ a {
     }
     &_ghost:hover {
         //cursor: pointer;
-        transform: translateY(-2px); 
-        box-shadow: 0px 6px 8px -4px rgba(24, 39, 75, 0.06), 0px 12px 10px -4px rgba(24, 39, 75, 0.04);
-        opacity: 0.75;
+        //transform: translateY(-2px); 
+        //box-shadow: 0px 6px 8px -4px rgba(24, 39, 75, 0.06), 0px 12px 10px -4px rgba(24, 39, 75, 0.04);
+        //opacity: 0.75;
         
     }
     &_reverse {
@@ -611,9 +614,9 @@ a {
     }
     &_reverse:hover {
         //cursor: pointer;
-        transform: translateY(-2px); 
-        box-shadow: 0px 6px 8px -4px rgba(24, 39, 75, 0.06), 0px 12px 10px -4px rgba(24, 39, 75, 0.04);
-        opacity: 0.85;
+        ///transform: translateY(-2px); 
+        //box-shadow: 0px 6px 8px -4px rgba(24, 39, 75, 0.06), 0px 12px 10px -4px rgba(24, 39, 75, 0.04);
+        //opacity: 0.85;
     }
     transition: background-color 0.15s ease, transform 0.15s ease, box-shadow 0.15s ease, border 0.15s ease, color 0.15s ease, opacity 0.15s ease;
 
@@ -714,10 +717,10 @@ a {
             transition: all 0.15s ease;
         }
         &:hover {
-            transform: translateY(-2px);
-            opacity: 0.7;
+            //transform: translateY(-2px);
+            //opacity: 0.7;
             .feature-item__link-icon {
-        transform: translateX(1px);
+        //transform: translateX(1px);
         svg path {
         }
     }
@@ -882,7 +885,7 @@ a {
     &__logo {
         margin-bottom: 16px;
         display: inline-block;
-        @extend %hover-opacity;
+        //@extend %hover-opacity;
         //cursor: pointer;
         line-height: 0;
         svg {
@@ -922,7 +925,7 @@ a {
         }
     }
     &__link {
-        @extend %hover-opacity;
+       // @extend %hover-opacity;
         transition: all 0.15s ease;
     }
     &__social-icons {
@@ -963,7 +966,7 @@ a {
         column-gap: 16px;
     }
     &__info {
-        @extend %hover-opacity;
+       // @extend %hover-opacity;
     }
 }
 .h3-title {

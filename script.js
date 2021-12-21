@@ -26,7 +26,7 @@ let mouseY = 0;
 let touch = window.matchMedia('(max-width: 1024px)');
 let button1 = document.querySelector('.button_primary');
 let tick = 1;
-let buttonText = ['Click me',
+let buttonText = ['Click something',
 				'Color copied!',
 				'Awesome!',
 				"You're doing great!",
@@ -196,7 +196,7 @@ function clickEvent() {
 	message.innerHTML = `Hex copied ${emojis[getRandomInt(emojis.length)]}`;
 	message2.innerHTML = `CSS copied ${emojis[getRandomInt(emojis.length)]}`;
 
-		if (event.target.closest('.navigation__burger') == null) {
+		if ((event.target.closest('.navigation__burger') == null) && (event.target.closest('.social-icons__icon') == null)) {
 		if (color != prevcolor) {
 			menuText.innerHTML = displayColor(color);
 			swatch.style.background = color;
@@ -210,7 +210,7 @@ function clickEvent() {
 
 
 
-	if (event.target.closest('.navigation__burger') == null) {
+	if ((event.target.closest('.navigation__burger') == null) && (event.target.closest('.social-icons__icon') == null)) {
 		if (event.target.closest('.menu') == null) {
 			menu.style.opacity = '1';
 		}
@@ -318,7 +318,9 @@ function clickEvent() {
 		tick=0;
 	}
 	}
-	event.preventDefault();
+	if (event.target.closest('.social-icons__icon') == null) {
+		event.preventDefault();
+	}
 	event.stopPropagation();
 }
 
@@ -340,7 +342,7 @@ function mouseMoveEvent() {
 
 
 
-	if (event.target.closest('.navigation__burger') == null) {
+	if ((event.target.closest('.navigation__burger') == null) && (event.target.closest('.social-icons__icon') == null)) {
 		if (color != prevcolor) {
 			menuText.innerHTML = displayColor(color);
 			swatch.style.background = color;

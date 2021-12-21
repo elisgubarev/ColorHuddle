@@ -147,11 +147,11 @@ body {
           align-items: center;
 }
 
-.footer__info, .footer__link, .footer__logo, .social-icons__icon, .navigation__link, .navigation__logo-box {
+.social-icons__icon {
   -webkit-transition: opacity 0.15s ease;
   transition: opacity 0.15s ease;
 }
-.footer__info:hover, .footer__link:hover, .footer__logo:hover, .social-icons__icon:hover, .navigation__link:hover, .navigation__logo-box:hover {
+.social-icons__icon:hover {
   opacity: 0.7;
 }
 
@@ -653,6 +653,9 @@ a {
 .social-icons__icon:last-child {
   margin-right: 0;
 }
+.social-icons__icon:hover {
+  cursor: pointer;
+}
 .social-icons__icon svg {
   height: 20px;
   width: auto;
@@ -751,30 +754,9 @@ a {
   transition: background-color 0.15s ease, transform 0.15s ease, box-shadow 0.15s ease, border 0.15s ease, color 0.15s ease, opacity 0.15s ease;
   transition: background-color 0.15s ease, transform 0.15s ease, box-shadow 0.15s ease, border 0.15s ease, color 0.15s ease, opacity 0.15s ease, -webkit-transform 0.15s ease, -webkit-box-shadow 0.15s ease;
 }
-.button_primary:hover {
-  opacity: 0.85;
-  -webkit-transform: translateY(-2px);
-          transform: translateY(-2px);
-  -webkit-box-shadow: 0px 6px 8px -4px rgba(24, 39, 75, 0.06), 0px 12px 10px -4px rgba(24, 39, 75, 0.04);
-          box-shadow: 0px 6px 8px -4px rgba(24, 39, 75, 0.06), 0px 12px 10px -4px rgba(24, 39, 75, 0.04);
-}
 .button_ghost {
   border: 2px solid;
   padding: 14px 30px;
-}
-.button_ghost:hover {
-  -webkit-transform: translateY(-2px);
-          transform: translateY(-2px);
-  -webkit-box-shadow: 0px 6px 8px -4px rgba(24, 39, 75, 0.06), 0px 12px 10px -4px rgba(24, 39, 75, 0.04);
-          box-shadow: 0px 6px 8px -4px rgba(24, 39, 75, 0.06), 0px 12px 10px -4px rgba(24, 39, 75, 0.04);
-  opacity: 0.75;
-}
-.button_reverse:hover {
-  -webkit-transform: translateY(-2px);
-          transform: translateY(-2px);
-  -webkit-box-shadow: 0px 6px 8px -4px rgba(24, 39, 75, 0.06), 0px 12px 10px -4px rgba(24, 39, 75, 0.04);
-          box-shadow: 0px 6px 8px -4px rgba(24, 39, 75, 0.06), 0px 12px 10px -4px rgba(24, 39, 75, 0.04);
-  opacity: 0.85;
 }
 @media (max-width: 576px) {
   .button {
@@ -873,15 +855,6 @@ a {
 .feature-item__link svg path {
   -webkit-transition: all 0.15s ease;
   transition: all 0.15s ease;
-}
-.feature-item__link:hover {
-  -webkit-transform: translateY(-2px);
-          transform: translateY(-2px);
-  opacity: 0.7;
-}
-.feature-item__link:hover .feature-item__link-icon {
-  -webkit-transform: translateX(1px);
-          transform: translateX(1px);
 }
 .feature-item__link-text {
   margin-right: 8px;
