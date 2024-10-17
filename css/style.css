@@ -2505,3 +2505,17 @@ body.style-11 .last-section {
 }
 
 */
+
+body.style-2 .linkedin-logo path {
+  fill: #f1f5f8;
+}
+body.style-3 .linkedin-logo path {
+  fill: #fef8fd;
+}
+body.style-5 .linkedin-logo path {
+  fill: #ffffff;
+}
+body.style-7 .linkedin-logo path {
+  fill: #f8fafc;
+}
+
